@@ -10,10 +10,10 @@
     angular
       .module('myApp', ['dyFlipClock'])
       .run(function($rootScope, $interval) {
-        $rootScope.time = 0;
+        $rootScope.time = 35000000000;
 
         $interval(function() {
-          $rootScope.time += 1000;
+          $rootScope.time -= 1000;
         }, 1000);
       });
   </script>

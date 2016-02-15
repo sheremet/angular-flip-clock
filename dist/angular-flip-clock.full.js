@@ -7,9 +7,9 @@ angular.module('dyFlipClock', [
 ]);
 
 angular.module('dyFlipClock.dyFlipClockDirective', [
-    'dyFlipClock.dyFlipClockNumberDirective',
-    'dyFlipClock.dyFlipClockLabelDirective'
-  ])
+  'dyFlipClock.dyFlipClockNumberDirective',
+  'dyFlipClock.dyFlipClockLabelDirective'
+])
   .directive('dyFlipClock', dyFlipClockDirective)
   .controller('DyFlipClockController', DyFlipClockController);
 
@@ -38,6 +38,8 @@ function DyFlipClockController($interval) {
 
   vm.time = 0;
 
+  vm.getDaysTensPlace = getDaysTensPlace;
+  vm.getDaysOnesPlace = getDaysOnesPlace;
   vm.getHoursTensPlace = getHoursTensPlace;
   vm.getHoursOnesPlace = getHoursOnesPlace;
   vm.getMinutesTensPlace = getMinutesTensPlace;
@@ -46,6 +48,14 @@ function DyFlipClockController($interval) {
   vm.getSecondsOnesPlace = getSecondsOnesPlace;
 
   //////////
+
+  function getDaysTensPlace() {
+    return _getTensPlace(_getDays(_getTimeAsNumber()));
+  }
+
+  function getDaysOnesPlace() {
+    return _getOnesPlace(_getDays(_getTimeAsNumber()));
+  }
 
   function getHoursTensPlace() {
     return _getTensPlace(_getHours(_getTimeAsNumber()));
@@ -69,6 +79,10 @@ function DyFlipClockController($interval) {
 
   function getSecondsOnesPlace() {
     return _getOnesPlace(_getSeconds(_getTimeAsNumber()));
+  }
+
+  function _getDays(time) {
+    return Math.floor(time / MILISECONDS_IN_24_HOURS);
   }
 
   function _getHours(time) {
@@ -182,7 +196,11 @@ function DyFlipClockNumberController($scope, $parse, $attrs) {
 angular.module('dyFlipClock').run(['$templateCache', function($templateCache) {
   $templateCache.put('src/js/angular-flip-clock-directive/angular-flip-clock-directive.html',
     '<div class="dy-flip-clock">\n' +
-    '  <dy-flip-clock-label text="Hours" hide-divider="true"></dy-flip-clock-label>\n' +
+    '  <dy-flip-clock-label text="Days" hide-divider="true"></dy-flip-clock-label>\n' +
+    '  <dy-flip-clock-number value="vm.getDaysTensPlace()"></dy-flip-clock-number>\n' +
+    '  <dy-flip-clock-number value="vm.getDaysOnesPlace()"></dy-flip-clock-number>\n' +
+    '\n' +
+    '  <dy-flip-clock-label text="Hours"></dy-flip-clock-label>\n' +
     '  <dy-flip-clock-number value="vm.getHoursTensPlace()"></dy-flip-clock-number>\n' +
     '  <dy-flip-clock-number value="vm.getHoursOnesPlace()"></dy-flip-clock-number>\n' +
     '\n' +
