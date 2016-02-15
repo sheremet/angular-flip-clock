@@ -59,7 +59,7 @@ gulp.task('copy-js', ['clean'], function() {
 gulp.task('generate-templates-js', ['clean'], function() {
   return gulp.src(paths.TEMPLATES_SRC, {base: '.'})
     .pipe(gulpNgHtml2Js({
-      moduleName: 'dyFlipClock',
+      moduleName: 'scrnzFlipClock',
       declareModule: false
     }))
     .pipe(gulpConcat('angular-flip-clock.tpl.js'))

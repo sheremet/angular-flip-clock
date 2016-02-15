@@ -1,5 +1,5 @@
 /* Main */
-.dy-flip-clock {
+.scrnz-flip-clock {
   font: normal 11px 'Helvetica Neue', Helvetica, sans-serif;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -12,23 +12,23 @@
   background: #474747;
 }
 
-.dy-flip-clock * {
+.scrnz-flip-clock * {
     box-sizing: border-box;
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
 }
 
-.dy-flip-clock:before,
-.dy-flip-clock:after {
+.scrnz-flip-clock:before,
+.scrnz-flip-clock:after {
     content: ' '; /* 1 */
     display: table; /* 2 */
 }
-.dy-flip-clock:after {
+.scrnz-flip-clock:after {
     clear: both;
 }
 
 /* Skeleton */
-.dy-flip-clock-number {
+.scrnz-flip-clock-number {
   position: relative;
   list-style: none;
   float: left;
@@ -43,7 +43,7 @@
   /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);*/
 }
 
-.dy-flip-clock-number-digit {
+.scrnz-flip-clock-number-digit {
   z-index: 1;
   position: absolute;
   left: 0;
@@ -54,11 +54,11 @@
   text-decoration: none !important;
 }
 
-.dy-flip-clock-number-digit:first-child {
+.scrnz-flip-clock-number-digit:first-child {
   z-index: 2;
 }
 
-.dy-flip-clock-card {
+.scrnz-flip-clock-card {
   display: block;
   height: 100%;
   -webkit-perspective: 200px;
@@ -68,8 +68,8 @@
   cursor: default !important;
 }
 
-.dy-flip-clock-card-up,
-.dy-flip-clock-card-down {
+.scrnz-flip-clock-card-up,
+.scrnz-flip-clock-card-down {
   z-index: 1;
   position: absolute;
   left: 0;
@@ -80,20 +80,20 @@
   outline: 1px solid transparent;
 }
 
-.dy-flip-clock-card-shadow {
+.scrnz-flip-clock-card-shadow {
   position: absolute;
   width: 100%;
   height: 100%;
   z-index: 2;
 }
 
-.dy-flip-clock-card-up {
+.scrnz-flip-clock-card-up {
   -webkit-transform-origin: 50% 100%;
           transform-origin: 50% 100%;
   top: 0;
 }
 
-.dy-flip-clock-card-up:after {
+.scrnz-flip-clock-card-up:after {
   content: '';
   position: absolute;
   top: 13px;
@@ -105,7 +105,7 @@
   background-color: rgba(71, 71, 71, 0.4);
 }
 
-.dy-flip-clock-card-down {
+.scrnz-flip-clock-card-down {
   -webkit-transform-origin: 50% 0;
           transform-origin: 50% 0;
   bottom: 0;
@@ -113,7 +113,7 @@
   border-bottom-right-radius: 6px;
 }
 
-.dy-flip-clock-card-value {
+.scrnz-flip-clock-card-value {
   position: absolute;
   left: 0;
   z-index: 1;
@@ -127,26 +127,26 @@
   font-size: 24px; /* 70px */
 }
 
-.dy-flip-clock-card-value-up {
+.scrnz-flip-clock-card-value-up {
   top: 0;
 }
 
-.dy-flip-clock-card-value-down {
+.scrnz-flip-clock-card-value-down {
   bottom: 0;
 }
 
 /* PLAY */
-.dy-flip-clock-number-animated .dy-flip-clock-number-digit-before {
+.scrnz-flip-clock-number-animated .scrnz-flip-clock-number-digit-before {
   z-index: 3;
 }
 
-.dy-flip-clock-number-animated .dy-flip-clock-number-digit-active {
-  -webkit-animation: dyFlipClockDigitZIndex 0.5s 0.5s linear both;
-          animation: dyFlipClockDigitZIndex 0.5s 0.5s linear both;
+.scrnz-flip-clock-number-animated .scrnz-flip-clock-number-digit-active {
+  -webkit-animation: scrnzFlipClockDigitZIndex 0.5s 0.5s linear both;
+          animation: scrnzFlipClockDigitZIndex 0.5s 0.5s linear both;
   z-index: 5;
 }
 
-.dy-flip-clock-divider {
+.scrnz-flip-clock-divider {
   float: left;
   display: inline-block;
   position: relative;
@@ -155,15 +155,15 @@
   top: 12px;
 }
 
-.dy-flip-clock-divider-hidden {
+.scrnz-flip-clock-divider-hidden {
   width: 0;
 }
 
-.dy-flip-clock-divider-hidden .dy-flip-clock-label{
+.scrnz-flip-clock-divider-hidden .scrnz-flip-clock-label{
   left: 0;
 }
 
-.dy-flip-clock-label {
+.scrnz-flip-clock-label {
   position: absolute;
   top: -9px;
   left: 5px; /* 20px */
@@ -176,7 +176,7 @@
   width: 30px; /* 80px */
 }
 
-.dy-flip-clock-dot {
+.scrnz-flip-clock-dot {
   display: block;
   background: #ffffff;
   width: 3px;
@@ -187,15 +187,15 @@
   left: 2px;
 }
 
-.dy-flip-clock-dot-top {
+.scrnz-flip-clock-dot-top {
   top: 10px;
 }
 
-.dy-flip-clock-dot-bottom {
+.scrnz-flip-clock-dot-bottom {
   bottom: 10px;
 }
 
-@-webkit-keyframes dyFlipClockDigitZIndex {
+@-webkit-keyframes scrnzFlipClockDigitZIndex {
   0% {
     z-index: 2;
   }
@@ -209,7 +209,7 @@
   }
 }
 
-@keyframes dyFlipClockDigitZIndex {
+@keyframes scrnzFlipClockDigitZIndex {
   0% {
     z-index: 2;
   }
@@ -223,13 +223,13 @@
   }
 }
 
-.dy-flip-clock-number-animated .dy-flip-clock-number-digit-active .dy-flip-clock-card-down {
+.scrnz-flip-clock-number-animated .scrnz-flip-clock-number-digit-active .scrnz-flip-clock-card-down {
   z-index: 2;
-  -webkit-animation: dyFlipClockTurnDown 0.5s 0.5s linear both;
-          animation: dyFlipClockTurnDown 0.5s 0.5s linear both;
+  -webkit-animation: scrnzFlipClockTurnDown 0.5s 0.5s linear both;
+          animation: scrnzFlipClockTurnDown 0.5s 0.5s linear both;
 }
 
-@-webkit-keyframes dyFlipClockTurnDown {
+@-webkit-keyframes scrnzFlipClockTurnDown {
   0% {
     -webkit-transform: rotateX(90deg);
             transform: rotateX(90deg);
@@ -241,7 +241,7 @@
   }
 }
 
-@keyframes dyFlipClockTurnDown {
+@keyframes scrnzFlipClockTurnDown {
   0% {
     -webkit-transform: rotateX(90deg);
             transform: rotateX(90deg);
@@ -253,13 +253,13 @@
   }
 }
 
-.dy-flip-clock-number-animated .dy-flip-clock-number-digit-before .dy-flip-clock-card-up {
+.scrnz-flip-clock-number-animated .scrnz-flip-clock-number-digit-before .scrnz-flip-clock-card-up {
   z-index: 2;
-  -webkit-animation: dyFlipClockTurnUp 0.5s linear both;
-          animation: dyFlipClockTurnUp 0.5s linear both;
+  -webkit-animation: scrnzFlipClockTurnUp 0.5s linear both;
+          animation: scrnzFlipClockTurnUp 0.5s linear both;
 }
 
-@-webkit-keyframes dyFlipClockTurnUp {
+@-webkit-keyframes scrnzFlipClockTurnUp {
   0% {
     -webkit-transform: rotateX(0deg);
             transform: rotateX(0deg);
@@ -271,7 +271,7 @@
   }
 }
 
-@keyframes dyFlipClockTurnUp {
+@keyframes scrnzFlipClockTurnUp {
   0% {
     -webkit-transform: rotateX(0deg);
             transform: rotateX(0deg);
@@ -283,41 +283,41 @@
   }
 }
 
-.dy-flip-clock-number-digit-active {
+.scrnz-flip-clock-number-digit-active {
   z-index: 3;
 }
 
 /* SHADOW */
-.dy-flip-clock-number-animated .dy-flip-clock-number-digit-before .dy-flip-clock-card-up .dy-flip-clock-card-shadow {
+.scrnz-flip-clock-number-animated .scrnz-flip-clock-number-digit-before .scrnz-flip-clock-card-up .scrnz-flip-clock-card-shadow {
   background: linear, top, rgba(0, 0, 0, 0.1) 0%, black 100%;
   background: linear, to bottom, rgba(0, 0, 0, 0.1) 0%, black 100%;
-  -webkit-animation: dyFlipClockShowShadow 0.5s linear both;
-          animation: dyFlipClockShowShadow 0.5s linear both;
+  -webkit-animation: scrnzFlipClockShowShadow 0.5s linear both;
+          animation: scrnzFlipClockShowShadow 0.5s linear both;
 }
 
-.dy-flip-clock-number-animated .dy-flip-clock-number-digit-active .dy-flip-clock-card-up .dy-flip-clock-card-shadow {
+.scrnz-flip-clock-number-animated .scrnz-flip-clock-number-digit-active .scrnz-flip-clock-card-up .scrnz-flip-clock-card-shadow {
   background: linear, top, rgba(0, 0, 0, 0.1) 0%, black 100%;
   background: linear, to bottom, rgba(0, 0, 0, 0.1) 0%, black 100%;
-  -webkit-animation: dyFlipClockHideShadow 0.5s 0.3s linear both;
-          animation: dyFlipClockHideShadow 0.5s 0.3s linear both;
+  -webkit-animation: scrnzFlipClockHideShadow 0.5s 0.3s linear both;
+          animation: scrnzFlipClockHideShadow 0.5s 0.3s linear both;
 }
 
 /*DOWN*/
-.dy-flip-clock-number-animated .dy-flip-clock-number-digit-before .dy-flip-clock-card-down .dy-flip-clock-card-shadow {
+.scrnz-flip-clock-number-animated .scrnz-flip-clock-number-digit-before .scrnz-flip-clock-card-down .scrnz-flip-clock-card-shadow {
   background: linear, top, black 0%, rgba(0, 0, 0, 0.1) 100%;
   background: linear, to bottom, black 0%, rgba(0, 0, 0, 0.1) 100%;
-  -webkit-animation: dyFlipClockShowShadow 0.5s linear both;
-          animation: dyFlipClockShowShadow 0.5s linear both;
+  -webkit-animation: scrnzFlipClockShowShadow 0.5s linear both;
+          animation: scrnzFlipClockShowShadow 0.5s linear both;
 }
 
-.dy-flip-clock-number-animated .dy-flip-clock-number-digit-active .dy-flip-clock-card-down .dy-flip-clock-card-shadow {
+.scrnz-flip-clock-number-animated .scrnz-flip-clock-number-digit-active .scrnz-flip-clock-card-down .scrnz-flip-clock-card-shadow {
   background: linear, top, black 0%, rgba(0, 0, 0, 0.1) 100%;
   background: linear, to bottom, black 0%, rgba(0, 0, 0, 0.1) 100%;
-  -webkit-animation: dyFlipClockHideShadow 0.5s 0.2s linear both;
-          animation: dyFlipClockHideShadow 0.5s 0.2s linear both;
+  -webkit-animation: scrnzFlipClockHideShadow 0.5s 0.2s linear both;
+          animation: scrnzFlipClockHideShadow 0.5s 0.2s linear both;
 }
 
-@-webkit-keyframes dyFlipClockShowShadow {
+@-webkit-keyframes scrnzFlipClockShowShadow {
   0% {
     opacity: 0;
   }
@@ -327,7 +327,7 @@
   }
 }
 
-@keyframes dyFlipClockShowShadow {
+@keyframes scrnzFlipClockShowShadow {
   0% {
     opacity: 0;
   }
@@ -337,7 +337,7 @@
   }
 }
 
-@-webkit-keyframes dyFlipClockHideShadow {
+@-webkit-keyframes scrnzFlipClockHideShadow {
   0% {
     opacity: 1;
   }
@@ -347,7 +347,7 @@
   }
 }
 
-@keyframes dyFlipClockHideShadow {
+@keyframes scrnzFlipClockHideShadow {
   0% {
     opacity: 1;
   }

@@ -1,9 +1,9 @@
-angular.module('dyFlipClock.dyFlipClockLabelDirective', [])
-  .directive('dyFlipClockLabel', dyFlipClockLabelDirective)
-  .controller('DyFlipClockLabelController', DyFlipClockLabelController);
+angular.module('scrnzFlipClock.scrnzFlipClockLabelDirective', [])
+  .directive('scrnzFlipClockLabel', scrnzFlipClockLabelDirective)
+  .controller('scrnzFlipClockLabelController', scrnzFlipClockLabelController);
 
-dyFlipClockLabelDirective.$inject = [];
-function dyFlipClockLabelDirective() {
+scrnzFlipClockLabelDirective.$inject = [];
+function scrnzFlipClockLabelDirective() {
   return {
     restrict: 'EA',
     scope: {
@@ -11,12 +11,12 @@ function dyFlipClockLabelDirective() {
       hideDivider: '='
     },
     bindToController: true,
-    controller: 'DyFlipClockLabelController',
+    controller: 'scrnzFlipClockLabelController',
     controllerAs: 'vm',
     templateUrl: 'src/js/angular-flip-clock-label-directive/angular-flip-clock-label-directive.html'
   };
 }
 
-DyFlipClockLabelController.$inject = [];
-function DyFlipClockLabelController() {
+scrnzFlipClockLabelController.$inject = [];
+function scrnzFlipClockLabelController() {
 }

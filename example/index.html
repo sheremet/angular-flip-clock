@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="../dist/angular-flip-clock.css">
   <script>
     angular
-      .module('myApp', ['dyFlipClock'])
+      .module('myApp', ['scrnzFlipClock'])
       .run(function($rootScope, $interval) {
         $rootScope.time = 35000000000;
 
@@ -20,7 +20,7 @@
 </head>
 <body ng-app="myApp">
   <div style="margin: 100px auto; width: 460px;">
-    <dy-flip-clock time="{{time}}"></dy-flip-clock>
+    <scrnz-flip-clock time="{{time}}"></scrnz-flip-clock>
   </div>
 </body>
 </html>

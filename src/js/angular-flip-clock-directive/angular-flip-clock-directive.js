@@ -1,26 +1,26 @@
-angular.module('dyFlipClock.dyFlipClockDirective', [
-  'dyFlipClock.dyFlipClockNumberDirective',
-  'dyFlipClock.dyFlipClockLabelDirective'
+angular.module('scrnzFlipClock.scrnzFlipClockDirective', [
+  'scrnzFlipClock.scrnzFlipClockNumberDirective',
+  'scrnzFlipClock.scrnzFlipClockLabelDirective'
 ])
-  .directive('dyFlipClock', dyFlipClockDirective)
-  .controller('DyFlipClockController', DyFlipClockController);
+  .directive('scrnzFlipClock', scrnzFlipClockDirective)
+  .controller('scrnzFlipClockController', scrnzFlipClockController);
 
-dyFlipClockDirective.$inject = [];
-function dyFlipClockDirective() {
+scrnzFlipClockDirective.$inject = [];
+function scrnzFlipClockDirective() {
   return {
     restrict: 'EA',
     scope: {
       time: '@'
     },
     bindToController: true,
-    controller: 'DyFlipClockController',
+    controller: 'scrnzFlipClockController',
     controllerAs: 'vm',
     templateUrl: 'src/js/angular-flip-clock-directive/angular-flip-clock-directive.html'
   };
 }
 
-DyFlipClockController.$inject = ['$interval'];
-function DyFlipClockController($interval) {
+scrnzFlipClockController.$inject = ['$interval'];
+function scrnzFlipClockController($interval) {
   var MILISECONDS_IN_SECOND = 1000;
   var MILISECONDS_IN_MINUTE = MILISECONDS_IN_SECOND * 60;
   var MILISECONDS_IN_HOUR = MILISECONDS_IN_MINUTE * 60;

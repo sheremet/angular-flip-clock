@@ -1,5 +1,5 @@
-angular.module('dyFlipClock', [
-  'dyFlipClock.dyFlipClockDirective',
-  'dyFlipClock.dyFlipClockNumberDirective',
-  'dyFlipClock.dyFlipClockLabelDirective'
+angular.module('scrnzFlipClock', [
+  'scrnzFlipClock.scrnzFlipClockDirective',
+  'scrnzFlipClock.scrnzFlipClockNumberDirective',
+  'scrnzFlipClock.scrnzFlipClockLabelDirective'
 ]);

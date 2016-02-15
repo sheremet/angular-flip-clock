@@ -1,21 +1,21 @@
-angular.module('dyFlipClock.dyFlipClockNumberDirective', [])
-  .directive('dyFlipClockNumber', dyFlipClockNumberDirective)
-  .controller('DyFlipClockNumberController', DyFlipClockNumberController);
+angular.module('scrnzFlipClock.scrnzFlipClockNumberDirective', [])
+  .directive('scrnzFlipClockNumber', scrnzFlipClockNumberDirective)
+  .controller('scrnzFlipClockNumberController', scrnzFlipClockNumberController);
 
-dyFlipClockNumberDirective.$inject = [];
-function dyFlipClockNumberDirective() {
+scrnzFlipClockNumberDirective.$inject = [];
+function scrnzFlipClockNumberDirective() {
   return {
     restrict: 'EA',
     scope: {},
     bindToController: true,
     controllerAs: 'vm',
-    controller: 'DyFlipClockNumberController',
+    controller: 'scrnzFlipClockNumberController',
     templateUrl: 'src/js/angular-flip-clock-number-directive/angular-flip-clock-number-directive.html'
   };
 }
 
-DyFlipClockNumberController.$inject = ['$scope', '$parse', '$attrs'];
-function DyFlipClockNumberController($scope, $parse, $attrs) {
+scrnzFlipClockNumberController.$inject = ['$scope', '$parse', '$attrs'];
+function scrnzFlipClockNumberController($scope, $parse, $attrs) {
   var vm = this;
 
   vm.numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];

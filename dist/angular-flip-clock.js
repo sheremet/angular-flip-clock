@@ -1,34 +1,34 @@
 (function() {
 'use strict';
-angular.module('dyFlipClock', [
-  'dyFlipClock.dyFlipClockDirective',
-  'dyFlipClock.dyFlipClockNumberDirective',
-  'dyFlipClock.dyFlipClockLabelDirective'
+angular.module('scrnzFlipClock', [
+  'scrnzFlipClock.scrnzFlipClockDirective',
+  'scrnzFlipClock.scrnzFlipClockNumberDirective',
+  'scrnzFlipClock.scrnzFlipClockLabelDirective'
 ]);
 
-angular.module('dyFlipClock.dyFlipClockDirective', [
-  'dyFlipClock.dyFlipClockNumberDirective',
-  'dyFlipClock.dyFlipClockLabelDirective'
+angular.module('scrnzFlipClock.scrnzFlipClockDirective', [
+  'scrnzFlipClock.scrnzFlipClockNumberDirective',
+  'scrnzFlipClock.scrnzFlipClockLabelDirective'
 ])
-  .directive('dyFlipClock', dyFlipClockDirective)
-  .controller('DyFlipClockController', DyFlipClockController);
+  .directive('scrnzFlipClock', scrnzFlipClockDirective)
+  .controller('scrnzFlipClockController', scrnzFlipClockController);
 
-dyFlipClockDirective.$inject = [];
-function dyFlipClockDirective() {
+scrnzFlipClockDirective.$inject = [];
+function scrnzFlipClockDirective() {
   return {
     restrict: 'EA',
     scope: {
       time: '@'
     },
     bindToController: true,
-    controller: 'DyFlipClockController',
+    controller: 'scrnzFlipClockController',
     controllerAs: 'vm',
     templateUrl: 'src/js/angular-flip-clock-directive/angular-flip-clock-directive.html'
   };
 }
 
-DyFlipClockController.$inject = ['$interval'];
-function DyFlipClockController($interval) {
+scrnzFlipClockController.$inject = ['$interval'];
+function scrnzFlipClockController($interval) {
   var MILISECONDS_IN_SECOND = 1000;
   var MILISECONDS_IN_MINUTE = MILISECONDS_IN_SECOND * 60;
   var MILISECONDS_IN_HOUR = MILISECONDS_IN_MINUTE * 60;
@@ -116,12 +116,12 @@ function DyFlipClockController($interval) {
   }
 }
 
-angular.module('dyFlipClock.dyFlipClockLabelDirective', [])
-  .directive('dyFlipClockLabel', dyFlipClockLabelDirective)
-  .controller('DyFlipClockLabelController', DyFlipClockLabelController);
+angular.module('scrnzFlipClock.scrnzFlipClockLabelDirective', [])
+  .directive('scrnzFlipClockLabel', scrnzFlipClockLabelDirective)
+  .controller('scrnzFlipClockLabelController', scrnzFlipClockLabelController);
 
-dyFlipClockLabelDirective.$inject = [];
-function dyFlipClockLabelDirective() {
+scrnzFlipClockLabelDirective.$inject = [];
+function scrnzFlipClockLabelDirective() {
   return {
     restrict: 'EA',
     scope: {
@@ -129,34 +129,34 @@ function dyFlipClockLabelDirective() {
       hideDivider: '='
     },
     bindToController: true,
-    controller: 'DyFlipClockLabelController',
+    controller: 'scrnzFlipClockLabelController',
     controllerAs: 'vm',
     templateUrl: 'src/js/angular-flip-clock-label-directive/angular-flip-clock-label-directive.html'
   };
 }
 
-DyFlipClockLabelController.$inject = [];
-function DyFlipClockLabelController() {
+scrnzFlipClockLabelController.$inject = [];
+function scrnzFlipClockLabelController() {
 }
 
-angular.module('dyFlipClock.dyFlipClockNumberDirective', [])
-  .directive('dyFlipClockNumber', dyFlipClockNumberDirective)
-  .controller('DyFlipClockNumberController', DyFlipClockNumberController);
+angular.module('scrnzFlipClock.scrnzFlipClockNumberDirective', [])
+  .directive('scrnzFlipClockNumber', scrnzFlipClockNumberDirective)
+  .controller('scrnzFlipClockNumberController', scrnzFlipClockNumberController);
 
-dyFlipClockNumberDirective.$inject = [];
-function dyFlipClockNumberDirective() {
+scrnzFlipClockNumberDirective.$inject = [];
+function scrnzFlipClockNumberDirective() {
   return {
     restrict: 'EA',
     scope: {},
     bindToController: true,
     controllerAs: 'vm',
-    controller: 'DyFlipClockNumberController',
+    controller: 'scrnzFlipClockNumberController',
     templateUrl: 'src/js/angular-flip-clock-number-directive/angular-flip-clock-number-directive.html'
   };
 }
 
-DyFlipClockNumberController.$inject = ['$scope', '$parse', '$attrs'];
-function DyFlipClockNumberController($scope, $parse, $attrs) {
+scrnzFlipClockNumberController.$inject = ['$scope', '$parse', '$attrs'];
+function scrnzFlipClockNumberController($scope, $parse, $attrs) {
   var vm = this;
 
   vm.numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
